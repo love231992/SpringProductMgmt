@@ -8,13 +8,8 @@ import org.springframework.context.ApplicationContext;
 public class ProductMgmtSpringBootApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(ProductMgmtSpringBootApplication.class, args);
+		SpringApplication.run(ProductMgmtSpringBootApplication.class, args);
 
-		ProductService service = context.getBean(ProductService.class);
-//		for (Product p: service.getAllProducts()) {
-//			System.out.println(p);
-//		}
-		service.addProduct(new Product("Hawai","Chappal","Floor",2024));
 
 	}
 

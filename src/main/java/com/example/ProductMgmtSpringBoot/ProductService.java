@@ -17,9 +17,21 @@ public class ProductService {
        return db.findAll();
     }
 
-    public void addProduct(Product p){
+    public List<Product> getProduct(String name){
+        return db.findByName(name);
+    }
+
+    public void saveProduct(Product p){
         db.save(p);
-        System.out.println("Product added in db");
+    }
+
+    public void remProduct(Product p){
+        db.delete(p);
+    }
+
+    public void remProductById(int id){
+
+        db.deleteById(id);
     }
 
 
